@@ -5,7 +5,7 @@ import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
 
 
-const Item = ({id, name, img, price, stock}) => {
+const Item = ({id, name, img, category, price, stock}) => {
 
     return (
         <Card className="Box" style={{ width: '18rem' }}>
@@ -14,6 +14,9 @@ const Item = ({id, name, img, price, stock}) => {
           <Image src={img} alt={name} thumbnail />
           <Card.Text>
           <section>
+            <p className="Info">
+                Categoria: {category}
+            </p>
             <p className="Info">
                 Precio: ${price}
             </p>
